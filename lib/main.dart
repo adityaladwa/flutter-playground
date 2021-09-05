@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_playground/home.dart';
+import 'package:flutter_playground/text.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +15,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
       ),
-      home: Scaffold(body: HomePage()),
+      initialRoute: "/",
+      routes: {
+        "/": (c) => HomePage(),
+        "Text": (context) => TextWidget()
+      },
     );
   }
 }

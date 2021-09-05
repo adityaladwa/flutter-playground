@@ -1,17 +1,25 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
-  final items = ["Layout"];
+  final items = ["Text"];
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: items.length,
-      itemBuilder: (context, index) {
-        return ListTile(
-          title: Text(items[index]),
-        );
-      },
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Home"),
+      ),
+      body: ListView.builder(
+        itemCount: items.length,
+        itemBuilder: (context, index) {
+          return ListTile(
+            title: Text(items[index]),
+            onTap: () {
+              Navigator.pushNamed(context, items[index]);
+            },
+          );
+        },
+      ),
     );
   }
 }
