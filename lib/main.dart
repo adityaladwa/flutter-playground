@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_playground/animation/animation_home.dart';
 import 'package:flutter_playground/home.dart';
 import 'package:flutter_playground/text.dart';
 
@@ -18,7 +19,8 @@ class MyApp extends StatelessWidget {
       initialRoute: "/",
       routes: {
         "/": (c) => HomePage(),
-        "Text": (context) => TextWidget()
+        "Text": (context) => TextWidget(),
+        "Animation": (context) => AnimationHomeWidget()
       },
     );
   }
