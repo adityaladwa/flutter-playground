@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_playground/animation/animated_align.dart';
+import 'package:flutter_playground/animation/annimation_builder.dart';
 
 class AnimationHomeWidget extends StatelessWidget {
   @override
@@ -12,14 +13,15 @@ class AnimationHomeWidget extends StatelessWidget {
       initialRoute: "/",
       routes: {
         "/": (c) => AnimationHome(),
-        "Animated Align": (c) => AnimatedAlignWidget()
+        "Animated Align": (c) => AnimatedAlignWidget(),
+        "Animation Builder": (c) => AnimationBuilderWidget()
       },
     );
   }
 }
 
 class AnimationHome extends StatelessWidget {
-  final items = ["Animated Align"];
+  final items = ["Animated Align", "Animation Builder"];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
